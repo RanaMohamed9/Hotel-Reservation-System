@@ -43,7 +43,7 @@
 	          <li class="nav-item"><a href="{{url ('restaurant')}}" class="nav-link">Restaurant</a></li>
 			  <li class="nav-item"><a href="{{url ('about')}}" class="nav-link">About</a></li>
 			  <li class="nav-item"><a href="{{url ('contact')}}" class="nav-link">Contact</a></li>
-			  <li class="nav-item"><a href="{{url ('signup')}}" class="nav-link">Sign Up</a></li>			  
+        <li class="nav-item"><a href="{{route ('register')}}" class="nav-link">Sign up</a></li>		  
 	        </ul>
 	      </div>
 	    </div>
