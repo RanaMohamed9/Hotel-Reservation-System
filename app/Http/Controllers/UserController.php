@@ -34,7 +34,7 @@ class UserController extends Controller
              'email'  => 'required|email',
              'phonenumber'  => 'required|min:11',
              'address'  => 'required|max:255',
-             'creditcard_id'  => 'required|min:15'
+             'creditcard_id'  => 'required|min:12'
            ]);
             }
             else{
@@ -43,7 +43,7 @@ class UserController extends Controller
                     'email'  => 'required|email|unique:users',
                     'phonenumber'  => 'required|min:11',
                     'address'  => 'required|max:255',
-                    'creditcard_id'  => 'required|min:15'
+                    'creditcard_id'  => 'required|min:12'
                   ]);
             }
            if($validate){
