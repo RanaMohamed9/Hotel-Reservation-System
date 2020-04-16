@@ -32,4 +32,8 @@ Route::get('/contact', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/edit', 'UserController@edit')->name('edit');
+Route::post('/edit', 'UserController@update')->name('update');
+Route::get('/password', 'UserController@passwordEdit')->name('password');
+Route::post('/password', 'UserController@passwordUpdate')->name('passwordupdate');
 
