@@ -31,7 +31,7 @@
                                 <input style="margin-bottom:20px;margin-left:95px;" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Your Name" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -44,7 +44,7 @@
                                 <input style="margin-bottom:20px;margin-left:95px;" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email Address" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -57,7 +57,7 @@
                                 <input style="margin-bottom:20px;margin-left:95px;" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -76,7 +76,7 @@
                                 <input style="margin-bottom:20px;margin-left:95px;" id="phonenumber" type="number" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber"  placeholder="Phone Number" value="{{ old('phonenumber') }}" required autocomplete="phonenumber" autofocus>
 
                                 @error('phonenumber')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -89,7 +89,7 @@
                                 <input style="margin-bottom:20px;margin-left:95px;" id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" placeholder="Address" required autocomplete="address" autofocus>
 
                                 @error('address')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -101,7 +101,7 @@
                                 <input style="margin-bottom:20px;margin-left:95px;" id="creditcard_id" type="number" class="form-control @error('creditcard_id') is-invalid @enderror" name="creditcard_id" value="{{ old('creditcard_id') }}" placeholder="Creditcard" required autocomplete="creditcard_id" autofocus>
 
                                 @error('creditcard_id')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

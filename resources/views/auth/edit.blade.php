@@ -17,7 +17,7 @@
 	<div class="page-content">
 		<div style = "margin-top:30px;" class="form-v6-content">
 			<div  class="form-left" >
-				<img style = "margin-bottom:6px;" src="imagess/seaa.jpg" alt="form">
+				<img style = "margin-bottom:6px;" src="imagess/clouds.jpg" alt="form">
 			</div>
                     <form method="POST" action="{{ route ('update') }}">
                        
@@ -39,13 +39,13 @@
                         <div class="form-group row">
                         
                        
-                            <div class="col-md-15 ">
-                            <h1 style="color:black;margin-top:40px;margin-bottom:35px;padding-left:120px;"><b>Edit info</b></h1>
+                            <div class="col-md-10 ">
+                            <h1 style="color:black;margin-top:50px;margin-bottom:55px;padding-left:160px;"><b>Edit info</b></h1>
                                  
-                                <input style="margin-bottom:20px;margin-left:120px;" id="name" value="{{$user['name']}}" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Your Name" required autocomplete="name" autofocus>
+                                <input style="margin-bottom:20px;margin-left:80px;" id="name" value="{{$user['name']}}" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Your Name" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:80px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -54,11 +54,11 @@
 
                         <div class="form-group row">
                             
-                            <div class="col-md-15 ">
-                                <input style="margin-bottom:35px;margin-left:120px;" id="email"value="{{$user['email']}}" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email Address" required autocomplete="email">
+                            <div class="col-md-10 ">
+                                <input style="margin-bottom:20px;margin-left:80px;" id="email"value="{{$user['email']}}" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email Address" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:80px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -66,11 +66,11 @@
                         </div>
                         <div class="form-group row">
                           
-                            <div class="col-md-15 ">
-                                <input style="margin-bottom:35px;margin-left:120px;" id="phonenumber" value="{{$user['phonenumber']}}"type="number" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber"  placeholder="Phone Number" value="{{ old('phonenumber') }}" required autocomplete="phonenumber" autofocus>
+                            <div class="col-md-10 ">
+                                <input style="margin-bottom:20px;margin-left:80px;" id="phonenumber" value="{{$user['phonenumber']}}"type="number" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber"  placeholder="Phone Number" value="{{ old('phonenumber') }}" required autocomplete="phonenumber" autofocus>
 
                                 @error('phonenumber')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:80px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -79,11 +79,11 @@
 
                         <div class="form-group row">
                             
-                            <div class="col-md-15">
-                                <input style="margin-bottom:35px;margin-left:120px;" id="address" value="{{$user['address']}}"type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" placeholder="Address" required autocomplete="address" autofocus>
+                            <div class="col-md-10">
+                                <input style="margin-bottom:20px;margin-left:80px;" id="address" value="{{$user['address']}}"type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" placeholder="Address" required autocomplete="address" autofocus>
 
                                 @error('address')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:80px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -91,11 +91,11 @@
                         </div>
                         <div class="form-group row">
                          
-                            <div class="col-md-15 ">
-                                <input style="margin-bottom:35px;margin-left:120px;" id="creditcard_id" value="{{$user['creditcard_id']}}"type="number" class="form-control @error('creditcard_id') is-invalid @enderror" name="creditcard_id" value="{{ old('creditcard_id') }}" placeholder="Creditcard" required autocomplete="creditcard_id" autofocus>
+                            <div class="col-md-10">
+                                <input style="margin-bottom:20px;margin-left:80px;" id="creditcard_id" value="{{$user['creditcard_id']}}"type="number" class="form-control @error('creditcard_id') is-invalid @enderror" name="creditcard_id" value="{{ old('creditcard_id') }}" placeholder="Creditcard" required autocomplete="creditcard_id" autofocus>
 
                                 @error('creditcard_id')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:80px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -104,8 +104,8 @@
 
                      
                         <div class="form-group row mb-0">
-                            <div class="col-md-12 ">
-                                <button style ="margin-top:10px;margin-bottom:35px;margin-left:155px;background-color:#fe892a;font-weight:bold ;font-size:15px; height:35px;width:120px;" type="submit" class="btn btn-primary">
+                            <div class="col-md-12">
+                                <button style ="margin-top:10px;margin-bottom:35px;margin-left:300px;background-color:#fe892a;font-weight:bold ;font-size:15px; height:35px;width:120px;" type="submit" class="btn btn-primary">
                                     {{ __('Update') }}
                                 </button>
                             </div>

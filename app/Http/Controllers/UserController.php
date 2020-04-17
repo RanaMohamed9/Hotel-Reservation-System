@@ -31,7 +31,7 @@ class UserController extends Controller
             if(Auth::user()->email==$request['email']){
            $validate = $request->validate([
              'name'  => 'required|max:255',
-             'email'  => 'required|email',
+             'email'  => 'required|email|max:255',
              'phonenumber'  => 'required|min:11',
              'address'  => 'required|max:255',
              'creditcard_id'  => 'required|min:12'
@@ -40,7 +40,7 @@ class UserController extends Controller
             else{
                 $validate = $request->validate([
                     'name'  => 'required|max:255',
-                    'email'  => 'required|email|unique:users',
+                    'email'  => 'required|email|unique:users|max:255',
                     'phonenumber'  => 'required|min:11',
                     'address'  => 'required|max:255',
                     'creditcard_id'  => 'required|min:12'

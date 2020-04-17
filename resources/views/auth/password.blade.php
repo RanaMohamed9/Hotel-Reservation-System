@@ -47,11 +47,11 @@
 
                         <div class="form-group row">
                          
-                            <div class="col-md-20 ">
-                                <input style="margin-bottom:20px;margin-left:130px;" id="oldpassword" type="password" class="form-control @error('oldpassword') is-invalid @enderror" name="oldpassword" placeholder="Current Password" required autocomplete="new-password">
+                            <div class="col-md-10 ">
+                                <input style="margin-bottom:20px;margin-left:95px;" id="oldpassword" type="password" class="form-control @error('oldpassword') is-invalid @enderror" name="oldpassword" placeholder="Current Password" required autocomplete="new-password">
 
                                 @error('oldpassword')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" >
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -60,31 +60,28 @@
 
                         <div class="form-group row">
                          
-                            <div class="col-md-20 ">
-                                <input style="margin-bottom:20px;margin-left:130px;" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="New Password" required autocomplete="new-password">
+                            <div class="col-md-10">
+                                <input style="margin-bottom:20px;margin-left:95px;" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="New Password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="margin-left:100px;">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
-
                         
-                        
-                        <div class="form-group row">
                           
-                          <div class="col-md-20 ">
-                              <input style="margin-bottom:20px;margin-left:130px;" id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
+                          <div class="col-md-11 ">
+                              <input style="margin-bottom:20px;margin-left:80px;" id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
                           </div>
                       </div>
                             
 
                      
                         <div class="form-group row mb-0">
-                            <div class="col-md-12 ">
-                                <button style ="margin-top:10px;margin-bottom:15px;margin-left:300px;background-color:#fe892a;font-weight:bold ;font-size:15px; height:35px;width:150px;" type="submit" class="btn btn-primary">
+                            <div class="col-md-10 ">
+                                <button style ="margin-top:10px;margin-bottom:15px;margin-left:250px;background-color:#fe892a;font-weight:bold ;font-size:15px; height:35px;width:150px;" type="submit" class="btn btn-primary">
                                     {{ __('Save changes') }}
                                 </button>
                             </div>
