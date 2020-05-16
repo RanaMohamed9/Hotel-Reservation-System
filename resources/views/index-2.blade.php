@@ -31,26 +31,25 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="{{url ('')}}">Deluxe</a>
+	      <a class="navbar-brand" href="{{url ('index-2')}}">Deluxe</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="{{url ('')}}" class="nav-link">Home</a></li>
-	         
-	          <li class="nav-item"><a href="{{url ('restaurant')}}" class="nav-link">Restaurant</a></li>
-			  <li class="nav-item"><a href="{{url ('about')}}" class="nav-link">About</a></li>
-			  <li class="nav-item"><a href="{{url ('contact')}}" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="{{route ('register')}}" class="nav-link">Sign up</a></li>		  
+	          <li class="nav-item active"><a href="{{url ('index-2')}}" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="{{url ('room')}}" class="nav-link">Rooms</a></li>
+            <li class="nav-item"><a href="{{url ('')}}" class="nav-link">Booking</a></li>
+            <li class="nav-item"><a href="{{url ('edit')}}" class="nav-link">Edit Profile</a></li>
+			  <li class="nav-item"><a href="{{url ('#')}}" class="nav-link">Logout</a></li>			  
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
 
-    <section class="home-slider owl-carousel">
+	<section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
       	<div class="overlay"></div>
         <div class="container">
