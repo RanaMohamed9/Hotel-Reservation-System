@@ -4,13 +4,13 @@
     <title>Deluxe Hotel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -42,7 +42,15 @@
 	          <li class="nav-item"><a href="{{url ('room')}}" class="nav-link">Rooms</a></li>
             <li class="nav-item"><a href="{{url ('')}}" class="nav-link">Booking</a></li>
             <li class="nav-item"><a href="{{url ('edit')}}" class="nav-link">Edit Profile</a></li>
-			  <li class="nav-item"><a href="{{url ('#')}}" class="nav-link">Logout</a></li>			  
+            <li class="nav-item"><a  href="{{ route('logout') }}"
+                                             onclick="event.preventDefault();
+                                                           document.getElementById('logout-form').submit();" class="nav-link">
+                                              {{ __('Logout') }}
+                                          </a>
+
+                                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                              @csrf
+                                          </form></li>	  
 	        </ul>
 	      </div>
 	    </div>
@@ -79,7 +87,7 @@
       </div>
     </section>
 
-   
+
 
 
     <section class="ftco-section ftc-no-pb ftc-no-pt">
@@ -126,7 +134,7 @@
                 <h3 class="heading mb-3">25/7 Front Desk</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services py-4 d-block text-center">
@@ -139,7 +147,7 @@
                 <h3 class="heading mb-3">Restaurant Bar</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-md-3 d-flex align-sel Searchf-stretch ftco-animate">
             <div class="media block-6 services py-4 d-block text-center">
@@ -152,7 +160,7 @@
                 <h3 class="heading mb-3">Transfer Services</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services py-4 d-block text-center">
@@ -165,7 +173,7 @@
                 <h3 class="heading mb-3">Spa Suites</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
       </div>
@@ -177,80 +185,80 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h2 class="mb-4">Our Rooms</h2>
           </div>
-        </div>    		
+        </div>
     		<div class="row">
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-1.jpg);">
-    					
+
     					</div>
     					<div class="text p-3 text-center">
     						<h3 class="mb-3">Suite Room</h3>
     						<p><span class="price mr-2">$120.00</span> <span class="per">per night</span></p>
-    					
-    						
+
+
     					</div>
     				</div>
     			</div>
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-2.jpg);">
-    						
+
     					</div>
     					<div class="text p-3 text-center">
     						<h3 class="mb-3">Family Room</h3>
     						<p><span class="price mr-2">$20.00</span> <span class="per">per night</span></p>
-    						
-    						
+
+
     					</div>
     				</div>
     			</div>
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-3.jpg);">
-    					
+
     					</div>
     					<div class="text p-3 text-center">
     						<h3 class="mb-3">Deluxe Room</h3>
     						<p><span class="price mr-2">$150.00</span> <span class="per">per night</span></p>
-    					
-    						
+
+
     					</div>
     				</div>
     			</div>
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-4.jpg);">
-    						
+
     					</div>
     					<div class="text p-3 text-center">
     						<h3 class="mb-3">Classic Room</h3>
     						<p><span class="price mr-2">$130.00</span> <span class="per">per night</span></p>
-    						
+
     					</div>
     				</div>
     			</div>
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-5.jpg);">
-    						
+
     					</div>
     					<div class="text p-3 text-center">
     						<h3 class="mb-3">Superior Room</h3>
     						<p><span class="price mr-2">$300.00</span> <span class="per">per night</span></p>
-    					
+
     					</div>
     				</div>
     			</div>
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-6.jpg);">
-    						
+
     					</div>
     					<div class="text p-3 text-center">
     						<h3 class="mb-3">Luxury Room</h3>
     						<p><span class="price mr-2">$500.00</span> <span class="per">per night</span></p>
-    					
+
     					</div>
     				</div>
     			</div>
@@ -517,8 +525,8 @@
               </ul>
             </div>
           </div>
-		  
-           
+
+
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Privacy</h2>
@@ -553,8 +561,8 @@
         </div>
       </div>
     </footer>
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -577,6 +585,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>
