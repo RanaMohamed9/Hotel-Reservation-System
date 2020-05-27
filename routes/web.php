@@ -27,6 +27,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::resource('rooms','RoomsController');
+
 
 
 Auth::routes();
