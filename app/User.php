@@ -41,4 +41,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Reservation');
     }
+    public function admincheck() {
+       return $this->role === 'admin';
+   }
 }
