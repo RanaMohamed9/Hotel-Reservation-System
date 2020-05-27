@@ -18,8 +18,14 @@
 </div>
 <div class="jumbotron text-center" style="margin-bottom:0">
 
+<<<<<<< HEAD
   <li style = "background-color:white;width:80px;font-weight:bold ;" class="btn btn-primary"><a href="{{url ('admin')}}" >Home</a></li>
 
   
+=======
+  <li class="btn btn-primary"><a href="{{url ('admin')}}" >Home</a></li>
+
+
+>>>>>>> 93218d5... room managment
 </body>
 </html>

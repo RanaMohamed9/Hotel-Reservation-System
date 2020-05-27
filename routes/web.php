@@ -38,6 +38,8 @@ Route::get('/booking', function () {
 
 Route::resource('rooms','RoomsController');
 
+Route::resource('rooms','RoomsController');
+
 
 
 Auth::routes();
