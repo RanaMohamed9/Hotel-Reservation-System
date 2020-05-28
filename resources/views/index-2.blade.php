@@ -40,7 +40,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{{url ('home')}}" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="{{url ('room')}}" class="nav-link">Rooms</a></li>
-            <li class="nav-item"><a href="{{url ('#')}}" class="nav-link">Booking</a></li>
+            <li class="nav-item"><a href="{{url ('booking')}}" class="nav-link">Booking</a></li>
             <li class="nav-item"><a href="{{url ('edit')}}" class="nav-link">Edit Profile</a></li>
             <li class="nav-item"><a  href="{{ route('logout') }}"
                                              onclick="event.preventDefault();

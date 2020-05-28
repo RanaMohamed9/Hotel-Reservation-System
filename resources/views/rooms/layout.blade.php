@@ -18,8 +18,8 @@
 </div>
 <div class="jumbotron text-center" style="margin-bottom:0">
 
-  <li class="btn btn-primary"><a href="{{url ('admin')}}" >Home</a></li>
+  <li style = "background-color:white;width:80px;font-weight:bold ;" class="btn btn-primary"><a href="{{url ('admin')}}" >Home</a></li>
 
-
+  
 </body>
 </html>

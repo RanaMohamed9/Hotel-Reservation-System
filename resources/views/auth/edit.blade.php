@@ -20,22 +20,12 @@
 				<img style = "margin-bottom:6px;" src="imagess/clouds.jpg" alt="form">
 			</div>
                     <form method="POST" action="{{ route ('update') }}">
-                       
-                       
                      @csrf
-             
-
-                
                     @if (session('success'))
                         <div class="alert alert-success" role="alert"style="color:black;margin-top:20px;padding-left:50px;margin-bottom:0px;" >
                             {{ session('success') }}
                         </div>
-                    @endif
-
-               
-
-
-                        
+                    @endif                        
                         <div class="form-group row">
                         
                        

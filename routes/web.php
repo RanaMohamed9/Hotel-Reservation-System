@@ -26,19 +26,19 @@ Route::get('/restaurant', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-<<<<<<< HEAD
 Route::get('/room', function () {
     return view('roomuser');
 });
 Route::get('/roomsingle', function () {
     return view('rooms-single');
 });
-=======
+Route::get('/booking', function () {
+    return view('booking');
+});
 
 Route::resource('rooms','RoomsController');
 
 
->>>>>>> 93218d5e7f2a852ac72e3c3ffc0c6998a785fffb
 
 Auth::routes();
 
