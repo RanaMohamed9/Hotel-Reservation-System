@@ -39,8 +39,8 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{{url ('Admin')}}" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="{{url ('#')}}" class="nav-link">Add Room</a></li>
-            <li class="nav-item"><a href="{{url ('#')}}" class="nav-link">Update Room</a></li>
+	          <li class="nav-item"><a href="{{url ('rooms')}}" class="nav-link">Manage Room</a></li>
+
             <li class="nav-item"><a  href="{{ route('logout') }}"
                                              onclick="event.preventDefault();
                                                            document.getElementById('logout-form').submit();" class="nav-link">
@@ -49,7 +49,7 @@
 
                                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                               @csrf
-                                          </form></li>	  
+                                          </form></li>
 	        </ul>
 	      </div>
 	    </div>
