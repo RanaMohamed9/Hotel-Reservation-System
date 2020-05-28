@@ -26,8 +26,12 @@ Route::get('/restaurant', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-
-
+Route::get('/room', function () {
+    return view('roomuser');
+});
+Route::get('/roomsingle', function () {
+    return view('rooms-single');
+});
 
 Auth::routes();
 
