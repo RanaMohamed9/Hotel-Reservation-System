@@ -38,7 +38,7 @@ Route::get('/booking', function () {
 
 Route::resource('rooms','RoomsController');
 
-
+Route::resource('view_users','Usercontroller');
 
 
 

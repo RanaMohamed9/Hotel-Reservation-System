@@ -48,10 +48,6 @@
 
                 <form action="{{ route('rooms.destroy',$room) }}" method="POST">
 
-
-
-
-
                     <a class="btn btn-primary" href="{{ route('rooms.edit',$room->id) }}">Edit Room</a>
 
                     @csrf

@@ -9,7 +9,20 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    
+  public function index()
+  {
+
+        $user = User::all();
+      return view('admindisplay.index', compact('user'));
+  }
+
+
+public function show(User $user)
+{
+    return view('admindisplay.show',compact('user'));
+}
+
+
     public function edit() {
     if (Auth::user()) {
      $user = User::find(Auth::user()->id);
@@ -20,7 +33,8 @@ class UserController extends Controller
         
      
     }
-    else{return redirect()->back();}
+    else {return redirect()->back();}
+       
      }    
 
     
