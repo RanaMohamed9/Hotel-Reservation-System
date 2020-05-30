@@ -37,7 +37,6 @@ Route::get('/booking', function () {
 });
 
 Route::resource('rooms','RoomsController');
-
 Route::resource('view_users','Usercontroller');
 
 
@@ -45,8 +44,9 @@ Route::resource('view_users','Usercontroller');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/edit', 'UserController@edit')->name('edit');
+Route::get('/edit', 'UserController@edit')->name('edituser');
 Route::post('/edit', 'UserController@update')->name('update');
 Route::get('/password', 'UserController@passwordEdit')->name('password');
 Route::post('/password', 'UserController@passwordUpdate')->name('passwordupdate');
 Route::middleware(['auth','admincheck'])->group(function (){ Route::get('/admin', 'HomeController@usersview')->name('usersview'); });
+Route::get('/booking', 'UserController@book')->name('book');

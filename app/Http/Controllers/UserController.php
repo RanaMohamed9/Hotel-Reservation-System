@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Rooms;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +15,17 @@ class UserController extends Controller
         $user = User::all();
       return view('admindisplay.index', compact('user'));
   }
+  
+  public function book()
+  {
+
+        $user = User::all();
+        $rooms = Rooms::all();
+      return view('booking', compact('user','rooms'));
+  }
+
+ 
+
 
 
 public function show(User $user)
@@ -27,7 +38,7 @@ public function show(User $user)
     if (Auth::user()) {
      $user = User::find(Auth::user()->id);
      if($user){
-         return view('auth.edit')->withUser($user);
+         return view('auth.edituser')->withUser($user);
      }
      else {return redirect()->back();}
         

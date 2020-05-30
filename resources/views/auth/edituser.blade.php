@@ -1,4 +1,4 @@
-@extends('layouts.editlayout')
+@extends('layouts.app')
 
 @section('content')
 <!DOCTYPE html>
@@ -95,11 +95,23 @@
                      
                         <div class="form-group row mb-0">
                             <div class="col-md-12">
-                                <button style ="margin-top:10px;margin-bottom:35px;margin-left:300px;background-color:#fe892a;font-weight:bold ;font-size:15px; height:35px;width:120px;" type="submit" class="btn btn-primary">
+                                <button style ="margin-top:10px;margin-bottom:15px;margin-left:300px;background-color:#fe892a;font-weight:bold ;font-size:15px; height:35px;width:120px;" type="submit" class="btn btn-primary">
                                     {{ __('Update') }}
                                 </button>
                             </div>
                         </div>	  
+                        <div class="form-group row">
+                            <div class="col-md-0 ">
+                               
+                                     
+                                        <a  style="padding-left:300px; font-size:16px; margin-bottom:1px;" class="btn btn-link" href="{{ route('password') }}">
+                                        {{ __('Or change password?') }}
+                                   
+								 </a>
+                            
+                                
+                            </div>                            
+                         </div>		  
                     </form>  
                 </div>
         </div>

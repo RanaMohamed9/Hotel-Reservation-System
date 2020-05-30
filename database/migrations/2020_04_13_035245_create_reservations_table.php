@@ -15,9 +15,12 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('reserve_id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('phonenumber');
             $table->date('check_in_date');
             $table->date('check_out_date');
-            $table->string('board_type',20);
+            $table->string('room_type');
             $table->smallInteger('room_numbers');
             $table->unsignedBigInteger('user_reserve');
             $table->foreign('user_reserve')->references('id')->on('users')->onDelete('cascade');

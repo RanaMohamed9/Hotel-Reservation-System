@@ -1,13 +1,21 @@
+@extends('layouts.app')
+@section('content')
+
+
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+<title>Deluxe Booking</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Deluxe Booking</title>
+	
+	
+	      
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
@@ -28,11 +36,14 @@
 </head>
 
 <body>
-	<div id="booking" class="section">
+	<div id="booking" class="section" style ="margin-top:-40px; margin-bottom:-20px">
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
+				@csrf
+
 					<div class="col-md-5">
+					
 						<div class="booking-cta">
 							<h1>Make your reservation</h1>
 						</div>
@@ -43,13 +54,13 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="text">
+											<input class="form-control" type="text" value="{{Auth()->user()->name}}" style="color:grey" >
 											<span class="form-label">Name</span>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="email">
+											<input class="form-control" type="email" value="{{Auth()->user()->email}}" style="color:grey">
 											<span class="form-label">Email</span>
 										</div>
 									</div>
@@ -57,14 +68,14 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="tel">
+											<input class="form-control" type="tel" value="{{Auth()->user()->phonenumber}}"  style="color:grey">
 											<span class="form-label">Phone</span>
 										</div>
 									</div>
-									<div class="col-md-3 col-sm-6">
-										<div class="form-group">
+									<div class="col-md-2 col-sm-6">
+										<div class="form-group" >
 											<span class="form-label">Rooms</span>
-											<select class="form-control">
+											<select class="form-control"  style="color:grey">
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
@@ -72,29 +83,30 @@
 											<span class="select-arrow"></span>
 										</div>
 									</div>
-									<div class="col-md-3 col-sm-6">
+									<div class="col-md-4 col-sm-6">
 										<div class="form-group">
-											<span class="form-label">Guests</span>
-											<select class="form-control">
-												<option>1 Person</option>
-												<option>2 People</option>
-												<option>3 People</option>
+											<span class="form-label">Room_Type</span>
+											<select class="form-control" style="color:grey"> 
+											@foreach($rooms as $room)
+												<option>{{ $room->room_type }}</option>
+												@endforeach
 											</select>
 											<span class="select-arrow"></span>
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								
+									<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="date" required>
-											<span class="form-label">Check In</span>
+											<input class="form-control" type="date" required  style="color:grey">
+											<span class="form-label" style="margin-top:-20px;color:black">Check In</span>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="date" required>
-											<span class="form-label">Check Out</span>
+											<input class="form-control" type="date" required  style="color:grey">
+											<span class="form-label"style="margin-top:-20px;color:black">Check Out</span>
 										</div>
 									</div>
 								</div>
@@ -132,3 +144,4 @@
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
+@endsection
