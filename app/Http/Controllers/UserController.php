@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Rooms;
 use Illuminate\Http\Request;
 use App\User;
+use App\Rooms;
+use App\Reservation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -22,6 +23,12 @@ class UserController extends Controller
         $user = User::all();
         $rooms = Rooms::all();
       return view('booking', compact('user','rooms'));
+  }
+  public function reserve1(Request $r)
+  {
+    Reservation::create(['name'=>$r->name ,'email'=>$r->email,'phonenumber'=>$r->phonenumber,'room_numbers'=>$r->room_numbers,'room_type'=>$r->room_type,'check_in_date'=>$r->check_in_date,'check_out_date'=>$r->check_out_date]);
+        
+      return redirect("/home");
   }
 
  

@@ -50,3 +50,4 @@ Route::get('/password', 'UserController@passwordEdit')->name('password');
 Route::post('/password', 'UserController@passwordUpdate')->name('passwordupdate');
 Route::middleware(['auth','admincheck'])->group(function (){ Route::get('/admin', 'HomeController@usersview')->name('usersview'); });
 Route::get('/booking', 'UserController@book')->name('book');
+Route::post('/reserve', 'UserController@reserve1')->name('reserve1');

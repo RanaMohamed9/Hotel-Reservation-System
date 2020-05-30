@@ -40,7 +40,7 @@
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
-				@csrf
+				
 
 					<div class="col-md-5">
 					
@@ -50,17 +50,18 @@
 					</div>
 					<div class="col-md-6 col-md-offset-1">
 						<div class="booking-form">
-							<form>
+							<form action="/reserve" method="POST">
+							@csrf
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="text" value="{{Auth()->user()->name}}" style="color:grey" >
+											<input name="name" class="form-control" type="text" value="{{Auth()->user()->name}}" style="color:grey" >
 											<span class="form-label">Name</span>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="email" value="{{Auth()->user()->email}}" style="color:grey">
+											<input name="email" class="form-control" type="email" value="{{Auth()->user()->email}}" style="color:grey">
 											<span class="form-label">Email</span>
 										</div>
 									</div>
@@ -68,14 +69,14 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="tel" value="{{Auth()->user()->phonenumber}}"  style="color:grey">
+											<input name="phonenumber" class="form-control" type="tel" value="{{Auth()->user()->phonenumber}}"  style="color:grey">
 											<span class="form-label">Phone</span>
 										</div>
 									</div>
 									<div class="col-md-2 col-sm-6">
 										<div class="form-group" >
 											<span class="form-label">Rooms</span>
-											<select class="form-control"  style="color:grey">
+											<select name='room_numbers' class="form-control"  style="color:grey">
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
@@ -86,7 +87,7 @@
 									<div class="col-md-4 col-sm-6">
 										<div class="form-group">
 											<span class="form-label">Room_Type</span>
-											<select class="form-control" style="color:grey"> 
+											<select name='room_type' class="form-control" style="color:grey"> 
 											@foreach($rooms as $room)
 												<option>{{ $room->room_type }}</option>
 												@endforeach
@@ -99,13 +100,13 @@
 									<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="date" required  style="color:grey">
+											<input name="check_in_date" class="form-control" type="date" required  style="color:grey">
 											<span class="form-label" style="margin-top:-20px;color:black">Check In</span>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input class="form-control" type="date" required  style="color:grey">
+											<input name ="check_out_date" class="form-control" type="date" required  style="color:grey">
 											<span class="form-label"style="margin-top:-20px;color:black">Check Out</span>
 										</div>
 									</div>

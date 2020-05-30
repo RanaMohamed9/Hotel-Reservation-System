@@ -16,14 +16,14 @@ class CreateReservationsTable extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('reserve_id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('phonenumber');
+            $table->smallInteger('room_numbers');
+            $table->string('room_type',20);
             $table->date('check_in_date');
             $table->date('check_out_date');
-            $table->string('room_type');
-            $table->smallInteger('room_numbers');
-            $table->unsignedBigInteger('user_reserve');
-            $table->foreign('user_reserve')->references('id')->on('users')->onDelete('cascade');
+            /* $table->unsignedBigInteger('user_reserve');
+            $table->foreign('user_reserve')->references('id')->on('users')->onDelete('cascade'); */
             $table->timestamps();
         });
     }
