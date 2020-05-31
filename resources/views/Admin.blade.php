@@ -43,6 +43,8 @@
             
             <li class="nav-item"><a href="{{url ('view_users')}}" class="nav-link">User Registertion</a></li>
 
+            <li class="nav-item"><a href="{{url ('adminbooking')}}" class="nav-link">Booking details</a></li>
+
             <li class="nav-item"><a  href="{{ route('logout') }}"
                                              onclick="event.preventDefault();
                                                            document.getElementById('logout-form').submit();" class="nav-link">

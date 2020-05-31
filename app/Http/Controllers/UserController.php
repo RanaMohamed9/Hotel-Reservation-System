@@ -16,7 +16,16 @@ class UserController extends Controller
         $user = User::all();
       return view('admindisplay.index', compact('user'));
   }
+
+  public function index2()
+  {
+        $reserve = Reservation::all();
+
+       return view('adminbooking.index2', compact('reserve'));
+  }
   
+  
+
   public function book()
   {
 
@@ -26,19 +35,19 @@ class UserController extends Controller
   }
   public function reserve1(Request $r)
   {
-    Reservation::create(['name'=>$r->name ,'email'=>$r->email,'phonenumber'=>$r->phonenumber,'room_numbers'=>$r->room_numbers,'room_type'=>$r->room_type,'check_in_date'=>$r->check_in_date,'check_out_date'=>$r->check_out_date]);
+      Reservation::create(['name'=>$r->name ,'email'=>$r->email,'phonenumber'=>$r->phonenumber,'room_numbers'=>$r->room_numbers,'room_type'=>$r->room_type,'check_in_date'=>$r->check_in_date,'check_out_date'=>$r->check_out_date]);
         
       return redirect("/home");
   }
 
+
  
 
 
-
-public function show(User $user)
-{
-    return view('admindisplay.show',compact('user'));
-}
+  public function show(User $user)
+  {
+      return view('admindisplay.show',compact('user'));
+  }
 
 
     public function edit() {
