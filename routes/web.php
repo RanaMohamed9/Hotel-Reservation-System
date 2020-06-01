@@ -54,3 +54,4 @@ Route::middleware(['auth','admincheck'])->group(function (){ Route::get('/admin'
 Route::get('/booking', 'UserController@book')->name('book');
 Route::post('/reserve', 'UserController@reserve1')->name('reserve1');
 Route::get('/adminbooking', 'UserController@index2')->name('index2');
+Route::get('/booking-details', 'UserController@userdetails')->name('userdetails');

@@ -23,7 +23,11 @@ class UserController extends Controller
 
        return view('adminbooking.index2', compact('reserve'));
   }
-  
+  public function userdetails()
+  {
+    $userbook = Reservation:: where('email',Auth::user()->email)->get();
+    return view('userbooking',compact('userbook'));
+  } 
   
 
   public function book()
