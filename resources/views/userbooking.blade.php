@@ -11,6 +11,12 @@
     </div>
 
    
+@if (\Session::has('success'))
+        <div class="alert alert-success">
+            <h5>{{ \Session::get('success') }}</h5>
+        </div>
+    @endif
+
 
     <table class="table table-bordered">
         <tr>
@@ -36,7 +42,10 @@
             <td>{{ $userbooks->check_in_date }}</td>
             <td>{{ $userbooks->check_out_date }}</td>
 
-         
+            <td>
+           <a href="/click_delete/{{$userbooks->reserve_id}}" class="btn btn-danger"> Cancel </a>
+                  
+</td>
             
         </tr>
         @endforeach

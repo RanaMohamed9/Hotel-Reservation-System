@@ -7,6 +7,7 @@ use App\Rooms;
 use App\Reservation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use DB;
 
 class UserController extends Controller
 {
@@ -29,6 +30,11 @@ class UserController extends Controller
     return view('userbooking',compact('userbook'));
   } 
   
+  public function delete($reserve_id)
+  {
+    DB::delete("delete from reservations where reserve_id = ? ",[$reserve_id]);
+    return redirect('/booking-details')->with('success','Reservation has been canceled successfully');
+  }
 
   public function book()
   {
